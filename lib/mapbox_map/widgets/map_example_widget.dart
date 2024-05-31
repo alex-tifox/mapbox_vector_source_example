@@ -48,13 +48,18 @@ class MapExampleWidgetState extends State<MapExampleWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: MapWidget(
-        styleUri: MapConfig.defaultMapStyle,
-        cameraOptions: CameraOptions(
-          center: Point(coordinates: Position(41.819734, -2.894154)).toJson(),
-          zoom: 14.0,
-        ),
-        onMapCreated: _onMapCreated,
+      body: Stack(
+        children: [
+          MapWidget(
+            styleUri: MapConfig.defaultMapStyle,
+            cameraOptions: CameraOptions(
+              center:
+                  Point(coordinates: Position(-2.894154, 41.819734)).toJson(),
+              zoom: 4.0,
+            ),
+            onMapCreated: _onMapCreated,
+          ),
+        ],
       ),
     );
   }
