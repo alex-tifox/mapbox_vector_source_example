@@ -1,16 +1,20 @@
-# mapbox_vector_source_example
+# Display Vector Source Data with MapBox in Flutter
 
-Evaluating Vector Source via Mapbox Tilesets in a Flutter app
+Evaluating Mapbox in a Flutter project. This project is showing how to use MapBox tilesets and expressions to display
+vector source data.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+To be able to run this project you need to have a MapBox account and a MapBox access token.
 
-A few resources to get you started if this is your first Flutter project:
+After that, go to `lib/mapbox_map/config/map_config.dart` and provide necessary:
+- `mapStyle` and `accessToken` to be able to display the map
+- `mapboxVectorSourceUrl` in format `mapbox://your_username.your_tileset_id`
+- `mapboxVectorSourceId` (which you provided when adding a new source)
+- `mapboxVectorSourceLayerId` (which is a source ID from Mapbox Studio)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+This steps are required to be able to display the map with all the data you've added to your account
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Feedback
+
+Feel free to reach out to me if you have any questions or feedback. I'm happy to help you with any issues you might have.
